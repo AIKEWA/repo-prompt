@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "aik-toolkit": {
+      "command": "python3",
+      "args": ["tools/mcp_aik_agent.py"],
+      "env": {}
+    }
+  }
+} 

@@ -1,0 +1,5 @@
+Title,Description,Persona,Impact
+Quantum Codemap Generator,"Build a visual tool that maps codebases using RepoPrompt + Cursor, integrated with AI-generated Codemap prompts.",Navigator of Infinite Systems,"Enhances code comprehension, speeds refactoring, visually teaches AI systems."
+PromptOps Control Center,"Create a local app to manage prompt versions, drift audits, and performance tests using GitOps + RepoPrompt.",Alchemist of Prompts / Guardian of Ethical Dimensions,Ensures prompt integrity and safety; provides audit logs and live prompt testing environments.
+AI-Ritual Sprint Planner,"Develop a sprint planning assistant that includes Codemap diffs, AI story tagging, and velocity metrics with emotional resonance.",Conductor of Cognitive Symphonies,Elevates sprint planning into human-AI collaboration artform.
+Ethical AI Companion Toolkit,"Bundle local-first AI apps for developers that comply with EWA guidelines: includes explainability, opt-out controls, zero cloud dependency.",Guardian of Ethical Dimensions / Weaver of Infrastructures,"Promotes trust, transparency, and ethical AI usage in local dev environments."

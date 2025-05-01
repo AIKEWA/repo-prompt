@@ -1,0 +1,14 @@
+{
+  "backend": {
+    "exclude": "(^|/)(\\.venv|venv|env)/|(^|/)tests?/|(^|/)docs?/",
+    "include": "\\.(py|go|rs|java|kt|cs)$"
+  },
+  "frontend": {
+    "exclude": "(^|/)node_modules/|(^|/)dist/|(^|/)build/",
+    "include": "\\.(js|jsx|ts|tsx|css|scss|sass|html)$"
+  },
+  "fullstack": {
+    "exclude": "(^|/)node_modules/|(^|/)dist/|(^|/)build/|(^|/)(\\.venv|venv|env)/|(^|/)tests?/",
+    "include": "\\.(py|go|rs|java|kt|cs|js|jsx|ts|tsx|css|scss|sass|html)$"
+  }
+}

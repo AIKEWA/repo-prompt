@@ -1,0 +1,5 @@
+{"created_at":"2025-04-27T00:59:34Z","title":"How to Code Green with Repo Prompt","presenter":"Alice","date":"2025-04-27","duration_min":null,"description":null,"recording_url":null,"tags":null,"type":"Tutorial"}
+{"created_at":"2025-04-27T00:59:34Z","engineer":"Bob","start_time":"13:00","end_time":"14:00","date":"2025-04-27","location":null,"summary":"Help setting up local LLMs","tags":null,"type":"OfficeHour"}
+{"created_at":"2025-04-27T00:59:34Z","title":"Green-vs-Baseline Benchmarks","path":"docs/benchmarks.md","summary":null,"version":null,"tags":null,"type":"KnowledgeEntry"}
+{"created_at":"2025-04-27T01:04:33Z","name":"Jane Doe","email":"jane@example.com","handle":null,"notes":null,"type":"AuthorisedEngineer"}
+{"created_at":"2025-04-27T01:04:33Z","engineer":"Jane Doe","start_time":"15:00","end_time":"16:00","date":"2025-01-08","location":null,"summary":null,"tags":null,"type":"OfficeHour"}

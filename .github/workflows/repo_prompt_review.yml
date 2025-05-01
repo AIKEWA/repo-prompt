@@ -1,0 +1,55 @@
+name: Repo Prompt PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read  # checkout
+  pull-requests: write  # post review comment
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Determine commit range
+        id: range
+        run: |
+          base=$(git merge-base origin/${{ github.base_ref }} HEAD)
+          echo "range=$base..HEAD" >> "$GITHUB_OUTPUT"
+
+      - name: Run Repo Prompt review
+        id: repo_prompt
+        run: |
+          python -m src review . --range "${{ steps.range.outputs.range }}" --model gpt-3.5-turbo > review.md
+          # Append to summary for quick glance
+          echo "### Repo Prompt Review" >> $GITHUB_STEP_SUMMARY
+          cat review.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Sustainability gate (tokens/energy)
+        run: |
+          python -m src.ci_sustainability_gate check --range "${{ steps.range.outputs.range }}" \
+            --max-tokens 50000 --max-kwh 0.08
+        env:
+          FORCE_LOCAL_LLM: 1  # encourage local model during CI
+
+      - name: Post comment to Pull Request
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: review.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

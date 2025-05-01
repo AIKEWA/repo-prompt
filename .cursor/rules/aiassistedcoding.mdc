@@ -1,0 +1,64 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+{
+  "projectRules": {
+    "Code Quality Standards": {
+      "enforceModularity": true,
+      "enforceSeparationOfConcerns": true,
+      "requireTypeHints": true,
+      "requireDocstrings": true,
+      "maxLineLength": 100,
+      "disallowHardcodedSecrets": true
+    },
+    "Testing Standards": {
+      "requireUnitTestsForNewCode": true,
+      "requireIntegrationTestsWhereNeeded": true,
+      "minTestCoveragePercent": 90,
+      "enforceNamingConventionsInTests": true
+    },
+    "Documentation Standards": {
+      "updateDocumentationForPublicAPIs": true,
+      "maintainArchitectureDocs": true,
+      "requireInlineCommentsForComplexLogic": true
+    },
+    "Security & Ethics": {
+      "sanitizeUserInputs": true,
+      "encryptSensitiveData": true,
+      "performBiasAuditsOnModels": true,
+      "trackEthicalDecisionsInCodeComments": true
+    },
+    "Human Collaboration Tags": {
+      "allowedTags": [
+        "// REVIEW:",
+        "// DISCUSS:",
+        "// TODO:",
+        "// QUESTION:",
+        "// FEEDBACK:"
+      ],
+      "requireResolutionBeforeMerge": true
+    },
+    "MCP and External Tools Integration": {
+      "allowRegisteredMCPAgentsOnly": true,
+      "logMCPToolUsage": true,
+      "requireSecureKeyManagement": true
+    },
+    "Commit Standards": {
+      "commitMessageFormat": "[TYPE] Short description (e.g., [FIX], [FEAT], [DOC], [REFACTOR])",
+      "linkCommitsToIssues": true,
+      "requirePreCommitLinting": true
+    },
+    "Performance and Sustainability": {
+      "optimizeForLowLatency": true,
+      "prioritizeEnergyEfficientAlgorithms": true,
+      "analyzeMemoryAndComputeUsage": true
+    },
+    "Miscellaneous Best Practices": {
+      "useEnvironmentVariablesForSecrets": true,
+      "disallowDeprecatedLibraries": true,
+      "preferOpenStandardsAndInteroperability": true
+    }
+  }
+}

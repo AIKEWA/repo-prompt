@@ -1,0 +1,38 @@
+{
+    "test_coverage_pct": {
+        "type": "gauge",
+        "description": "Current pytest coverage percentage across src/",
+        "labels": [
+            "branch",
+            "commit"
+        ]
+    },
+    "commit_pass_ratio": {
+        "type": "counter",
+        "description": "Ratio of successful CI builds to total commits (per branch)",
+        "labels": [
+            "branch"
+        ]
+    },
+    "drift_events_total": {
+        "type": "counter",
+        "description": "Total number of drift detections flagged by diff_review_standards",
+        "labels": [
+            "branch"
+        ]
+    },
+    "prompt_ops_actions_total": {
+        "type": "counter",
+        "description": "Number of PromptOps CLI actions executed (init/add/list/show)",
+        "labels": [
+            "action"
+        ]
+    },
+    "cip_mean_score": {
+        "type": "gauge",
+        "description": "Mean CIP score across personas computed by evaluation_monitoring",
+        "labels": [
+            "interval"
+        ]
+    }
+}
